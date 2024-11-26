@@ -1,21 +1,41 @@
-/* Estilo base para os links da navbar */
+/* Container principal da navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  padding: 1rem 2rem;
+  color: #fff;
+}
+
+/* Estilo do título/logo */
+.navbarBrand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Container dos links */
+.navLinks {
+  display: flex;
+  gap: 1.5rem;
+}
+
+/* Estilo dos links */
 .navLink {
-    color: #007bff; /* Cor azul padrão */
-    text-decoration: none; /* Remove o sublinhado */
-    padding: 0.5rem 1rem; /* Espaçamento interno */
-    transition: color 0.3s ease; /* Transição suave para mudanças de cor */
-  }
-  
-  /* Estilo ao passar o mouse */
-  .navLink:hover {
-    color: #0056b3; /* Azul mais escuro no hover */
-    text-decoration: underline; /* Sublinhado no hover */
-  }
-  
-  /* Estilo para o link ativo */
-  .navLinkActive {
-    color: #fff; /* Texto branco */
-    background-color: #007bff; /* Fundo azul */
-    border-radius: 5px; /* Bordas arredondadas */
-  }
-  
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #ffdd57; /* Cor amarela no hover */
+}
+
+/* Link ativo */
+.active {
+  font-weight: bold;
+  color: #ffdd57; /* Destaque para o link ativo */
+}

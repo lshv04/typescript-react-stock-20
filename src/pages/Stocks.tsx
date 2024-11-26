@@ -1,10 +1,17 @@
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
-import styles from './Stocks.module.css'; // Importa o CSS Module
+import { useTheme } from '../context/ThemeContext';
+import styles from './Stocks.module.css';
 
 const Stocks: React.FC = () => {
+  const { isDark } = useTheme(); // Obtém o estado do tema
+
   return (
-    <div className={styles.container}>
+    <div
+      className={`${styles.container} ${
+        isDark ? styles.dark : styles.light
+      }`} // Aplica dinamicamente o tema
+    >
       <h1 className={styles.title}>Stocks Page</h1>
       <nav className={styles.nav}>
         <ul>
@@ -51,7 +58,7 @@ const Stocks: React.FC = () => {
         </ul>
       </nav>
       <div className={styles.content}>
-        <Outlet /> {/* Renderiza as rotas aninhadas aqui */}
+        <Outlet />
       </div>
     </div>
   );

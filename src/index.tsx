@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import { ThemeProvider } from './context/ThemeContext'; // Importa o ThemeProvider
 
 
 const root = ReactDOM.createRoot(
@@ -12,7 +13,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider>
+      <App /> {/* O App está agora dentro do ThemeProvider */}
+    </ThemeProvider>
   </React.StrictMode>
 );
 

@@ -1,10 +1,14 @@
 import React from 'react';
+import { useTheme } from '../../context/ThemeContext';
+import './StocksShared.css'; // Importa o CSS compartilhado
 
 const Dividends: React.FC = () => {
+  const { isDark } = useTheme();
+
   return (
-    <div>
-      <h2>Dividends</h2>
-      <p>Informações sobre dividendos das ações.</p>
+    <div className={`container ${isDark ? 'dark' : 'light'}`}>
+      <h1 className="title">Dividends</h1>
+     <p>Dividendos AAPL</p>
     </div>
   );
 };
