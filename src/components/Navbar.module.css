@@ -1,0 +1,21 @@
+/* Estilo base para os links da navbar */
+.navLink {
+    color: #007bff; /* Cor azul padrão */
+    text-decoration: none; /* Remove o sublinhado */
+    padding: 0.5rem 1rem; /* Espaçamento interno */
+    transition: color 0.3s ease; /* Transição suave para mudanças de cor */
+  }
+  
+  /* Estilo ao passar o mouse */
+  .navLink:hover {
+    color: #0056b3; /* Azul mais escuro no hover */
+    text-decoration: underline; /* Sublinhado no hover */
+  }
+  
+  /* Estilo para o link ativo */
+  .navLinkActive {
+    color: #fff; /* Texto branco */
+    background-color: #007bff; /* Fundo azul */
+    border-radius: 5px; /* Bordas arredondadas */
+  }
+  

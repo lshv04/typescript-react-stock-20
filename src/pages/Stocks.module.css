@@ -1,0 +1,65 @@
+/* Container principal */
+.container {
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Cor de fundo suave */
+    border-radius: 5px;
+  }
+  
+  /* Estilo do título */
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Navegação */
+  .nav {
+    margin-bottom: 1.5rem;
+  }
+  
+  .nav ul {
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center; /* Centraliza os links */
+  }
+  
+  .nav ul li {
+    margin: 0;
+  }
+  
+  /* Estilo dos links */
+  .navLink {
+    text-decoration: none;
+    color: #007bff; /* Azul padrão */
+    padding: 0.5rem 1rem; /* Espaçamento interno */
+    transition: color 0.3s, background-color 0.3s ease; /* Suaviza transições */
+    border-radius: 5px;
+  }
+  
+  /* Hover nos links */
+  .navLink:hover {
+    background-color: #e9ecef; /* Fundo claro ao passar o mouse */
+    color: #0056b3; /* Azul mais escuro */
+  }
+  
+  /* Link ativo */
+  .active {
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff; /* Fundo azul para o link ativo */
+    border-radius: 5px; /* Bordas arredondadas */
+  }
+  
+  /* Conteúdo renderizado pelas rotas aninhadas */
+  .content {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #ffffff; /* Fundo branco */
+  }
+  

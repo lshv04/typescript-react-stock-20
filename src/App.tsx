@@ -1,26 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Stocks from './pages/Stocks';
+import Crypto from './pages/Crypto';
+import DailyOpenClose from './pages/stocks/DailyOpenClose';
+import TickerNews from './pages/stocks/TickerNews';
+import Dividends from './pages/stocks/Dividends';
+import StockFinancial from './pages/stocks/StockFinancial';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        {/* Rota padrão */}
+        <Route path="/" element={<Navigate to="/stocks" />} />
+
+        {/* Rotas principais */}
+        <Route path="/stocks" element={<Stocks />}>
+          {/* Redirecionamento padrão para Daily Open/Close */}
+          <Route index element={<Navigate to="daily-open-close" />} />
+          <Route path="daily-open-close" element={<DailyOpenClose />} />
+          <Route path="ticker-news" element={<TickerNews />} />
+          <Route path="dividends" element={<Dividends />} />
+          <Route path="stock-financial" element={<StockFinancial />} />
+        </Route>
+        <Route path="/crypto" element={<Crypto />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
