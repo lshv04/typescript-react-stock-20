@@ -7,7 +7,7 @@ const SharedInput: React.FC = () => {
   const [localValue, setLocalValue] = useState<string>(''); // Gerencia o valor localmente
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setLocalValue(e.target.value); // Atualiza o estado local
+    setLocalValue(e.target.value.toUpperCase()); // Converte para maiúsculas
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -17,20 +17,22 @@ const SharedInput: React.FC = () => {
   };
 
   return (
-    <div className='container g-0 bord'>
-    <form onSubmit={handleSubmit} className={styles.form}>
-      <input
-        id="shared-input"
-        type="text"
-        value={localValue}
-        onChange={handleChange}
-        placeholder="Search symbols..."
-        className={styles.input}
-      />
-      <button type="submit" className={styles.button}>
-        <span><i className="bi bi-search"></i></span>
-      </button>
-    </form>
+    <div className="container g-0 bord">
+      <form onSubmit={handleSubmit} className={styles.form}>
+        <input
+          id="shared-input"
+          type="text"
+          value={localValue}
+          onChange={handleChange}
+          placeholder="Search symbols..."
+          className={styles.input}
+        />
+        <button type="submit" className={styles.button}>
+          <span>
+            <i className="bi bi-search"></i>
+          </span>
+        </button>
+      </form>
     </div>
   );
 };
