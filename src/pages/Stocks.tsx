@@ -14,9 +14,10 @@ const Stocks: React.FC = () => {
         isDark ? styles.dark : styles.light
       }`} // Aplica dinamicamente o tema
     >
-      <h1 className={styles.title}>Stocks Page</h1>
+     
       <SharedInput/>
-      <nav className={styles.nav}>
+      <nav className={`${styles.nav} bord`}>
+
         <ul>
           <li>
             <NavLink

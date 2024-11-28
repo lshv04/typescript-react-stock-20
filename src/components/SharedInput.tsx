@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useInputContext } from '../context/InputContext';
+import styles from './SharedInput.module.css';
 
 const SharedInput: React.FC = () => {
   const { setInputValue } = useInputContext(); // Atualiza o contexto
@@ -16,17 +17,21 @@ const SharedInput: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="shared-input">Shared Input:</label>
+    <div className='container bord'>
+    <form onSubmit={handleSubmit} className={styles.form}>
       <input
         id="shared-input"
         type="text"
         value={localValue}
         onChange={handleChange}
         placeholder="Digite algo..."
+        className={styles.input}
       />
-      <button type="submit">Submit</button>
+      <button type="submit" className={styles.button}>
+        Submit
+      </button>
     </form>
+    </div>
   );
 };
 

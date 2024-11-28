@@ -29,7 +29,7 @@
   
   /* Navegação */
   .nav {
-    margin-bottom: 1.5rem;
+    margin: 1.5rem;
   }
   
   .nav ul {
@@ -38,10 +38,12 @@
     display: flex;
     gap: 1rem;
     justify-content: center; /* Centraliza os links */
+    margin: 0;
+
   }
   
   .nav ul li {
-    margin: 0;
+    margin: 0 ;
   }
   
   /* Estilo dos links */
