@@ -8,7 +8,7 @@ const DailyOpenClose: React.FC = () => {
   const { inputValue } = useInputContext(); // Obtém o valor do contexto de input
 
   return (
-    <div className={`container bord ${isDark ? 'dark' : 'light'}`}>
+    <div className={`container g-0 bord ${isDark ? 'dark' : 'light'}`}>
       <h1 className="title">Daily Open/Close</h1>
       <div className="content">
         <p>Informações sobre abertura e fechamento diário das ações.</p>

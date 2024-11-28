@@ -17,7 +17,7 @@ const SharedInput: React.FC = () => {
   };
 
   return (
-    <div className='container bord'>
+    <div className='container g-0 bord'>
     <form onSubmit={handleSubmit} className={styles.form}>
       <input
         id="shared-input"

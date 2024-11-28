@@ -8,63 +8,61 @@ const Stocks: React.FC = () => {
   const { isDark } = useTheme(); // Obtém o estado do tema
 
   return (
-    <div className='container-fluid bord g-0'>
-    <div
-      className={`${styles.container} ${
-        isDark ? styles.dark : styles.light
-      }`} // Aplica dinamicamente o tema
-    >
-     
-      <SharedInput/>
-      <nav className={`${styles.nav} bord`}>
-
-        <ul>
-          <li>
-            <NavLink
-              to="daily-open-close"
-              className={({ isActive }) =>
-                `${styles.navLink} ${isActive ? styles.active : ''}`
-              }
-            >
-              Daily Open/Close
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="ticker-news"
-              className={({ isActive }) =>
-                `${styles.navLink} ${isActive ? styles.active : ''}`
-              }
-            >
-              Ticker News
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="dividends"
-              className={({ isActive }) =>
-                `${styles.navLink} ${isActive ? styles.active : ''}`
-              }
-            >
-              Dividends
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="stock-financial"
-              className={({ isActive }) =>
-                `${styles.navLink} ${isActive ? styles.active : ''}`
-              }
-            >
-              Stock Financial
-            </NavLink>
-          </li>
-        </ul>
-      </nav>
-      <div className={styles.content}>
-        <Outlet />
+    <div className="container bord g-0">
+      <div
+        className={`${styles.container} ${
+          isDark ? styles.dark : styles.light
+        }`} // Aplica dinamicamente o tema
+      >
+        <SharedInput />
+        <nav className={`${styles.nav} bord`}>
+          <div className="row g-3 "> {/* Estrutura em grid */}
+            <div className="col-6  col-md-3 bord">
+              <NavLink
+                to="daily-open-close"
+                className={({ isActive }) =>
+                  `${styles.navLink} ${isActive ? styles.active : ''}`
+                }
+              >
+                Open/Close
+              </NavLink>
+            </div>
+            <div className="col-6  col-md-3 bord">
+              <NavLink
+                to="ticker-news"
+                className={({ isActive }) =>
+                  `${styles.navLink} ${isActive ? styles.active : ''}`
+                }
+              >
+                News
+              </NavLink>
+            </div>
+            <div className="col-6  col-md-3 bord">
+              <NavLink
+                to="dividends"
+                className={({ isActive }) =>
+                  `${styles.navLink} ${isActive ? styles.active : ''}`
+                }
+              >
+                Dividends
+              </NavLink>
+            </div>
+            <div className="col-6  col-md-3 bord">
+              <NavLink
+                to="stock-financial"
+                className={({ isActive }) =>
+                  `${styles.navLink} ${isActive ? styles.active : ''}`
+                }
+              >
+                Financial
+              </NavLink>
+            </div>
+          </div>
+        </nav>
+        <div className={styles.content}>
+          <Outlet />
+        </div>
       </div>
-    </div>
     </div>
   );
 };

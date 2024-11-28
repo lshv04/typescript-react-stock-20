@@ -18,33 +18,14 @@
     color: #f8f9fa;
   }
   
-  /* Estilo do título */
-  .title {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
+
   
   /* Navegação */
   .nav {
     margin: 1.5rem;
   }
   
-  .nav ul {
-    list-style: none; /* Remove os marcadores da lista */
-    padding: 0;
-    display: flex;
-    gap: 1rem;
-    justify-content: center; /* Centraliza os links */
-    margin: 0;
-
-  }
-  
-  .nav ul li {
-    margin: 0 ;
-  }
+ 
   
   /* Estilo dos links */
   .navLink {
@@ -53,6 +34,9 @@
     padding: 0.5rem 1rem; /* Espaçamento interno */
     transition: color 0.3s, background-color 0.3s ease; /* Suaviza transições */
     border-radius: 5px;
+    display: flex;
+    
+    justify-content: center; /* Centraliza os links */
   }
   
   /* Hover nos links */
