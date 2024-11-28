@@ -2,17 +2,20 @@ import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 import styles from './Stocks.module.css';
+import SharedInput from '../components/SharedInput';
 
 const Stocks: React.FC = () => {
   const { isDark } = useTheme(); // Obtém o estado do tema
 
   return (
+    <div className='container-fluid bord g-0'>
     <div
       className={`${styles.container} ${
         isDark ? styles.dark : styles.light
       }`} // Aplica dinamicamente o tema
     >
       <h1 className={styles.title}>Stocks Page</h1>
+      <SharedInput/>
       <nav className={styles.nav}>
         <ul>
           <li>
@@ -60,6 +63,7 @@ const Stocks: React.FC = () => {
       <div className={styles.content}>
         <Outlet />
       </div>
+    </div>
     </div>
   );
 };

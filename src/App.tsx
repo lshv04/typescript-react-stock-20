@@ -7,9 +7,11 @@ import DailyOpenClose from './pages/stocks/DailyOpenClose';
 import TickerNews from './pages/stocks/TickerNews';
 import Dividends from './pages/stocks/Dividends';
 import StockFinancial from './pages/stocks/StockFinancial';
+import { InputProvider } from './context/InputContext';
 
 const App: React.FC = () => {
   return (
+    <InputProvider>
     <Router>
       <Navbar />
       <Routes>
@@ -17,6 +19,7 @@ const App: React.FC = () => {
         <Route path="/" element={<Navigate to="/stocks" />} />
 
         {/* Rotas principais */}
+       
         <Route path="/stocks" element={<Stocks />}>
           {/* Redirecionamento padrão para Daily Open/Close */}
           <Route index element={<Navigate to="daily-open-close" />} />
@@ -25,9 +28,11 @@ const App: React.FC = () => {
           <Route path="dividends" element={<Dividends />} />
           <Route path="stock-financial" element={<StockFinancial />} />
         </Route>
+       
         <Route path="/crypto" element={<Crypto />} />
       </Routes>
     </Router>
+    </InputProvider>
   );
 };
 

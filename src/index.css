@@ -42,4 +42,6 @@
   .themeSwitch:hover {
     opacity: 0.9;
   }
-  
+  .bord{
+    border: 1px solid red;
+  }
