@@ -10,7 +10,7 @@ const ThemeSwitch: React.FC = () => {
       className={`themeSwitch ${isDark ? 'on' : 'off'}`}
       onClick={toggleTheme} // Alterna o tema ao clicar
     >
-      {isDark ? 'Dark Mode' : 'Light Mode'} {/* Texto do botão */}
+      {isDark ? <i className="bi bi-moon-stars"></i> : <i className="bi bi-brightness-high"></i>} {/* Texto do botão */}
     </button>
   );
 };

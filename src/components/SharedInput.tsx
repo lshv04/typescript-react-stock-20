@@ -24,11 +24,11 @@ const SharedInput: React.FC = () => {
         type="text"
         value={localValue}
         onChange={handleChange}
-        placeholder="Digite algo..."
+        placeholder="Search symbols..."
         className={styles.input}
       />
       <button type="submit" className={styles.button}>
-        Submit
+        <span><i className="bi bi-search"></i></span>
       </button>
     </form>
     </div>
