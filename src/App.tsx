@@ -14,6 +14,7 @@ import Dividends from "./pages/stocks/Dividends";
 import StockFinancial from "./pages/stocks/StockFinancial";
 import { InputProvider } from "./context/InputContext";
 import ExtraInfo from "./pages/stocks/ExtraInfo";
+import FinancialExtra from "./pages/stocks/FinancialExtra";
 
 const App: React.FC = () => {
   return (
@@ -32,7 +33,9 @@ const App: React.FC = () => {
             <Route path="ticker-news" element={<TickerNews />} />
             <Route path="dividends" element={<Dividends />} />
             <Route path="stock-financial" element={<StockFinancial />} />
-            <Route path="extrainfo" element={<ExtraInfo />} /> {/* Caminho relativo */}
+            <Route path="extrainfo" element={<ExtraInfo />} />
+            <Route path="/stocks/stock-financial/financial-extra" element={<FinancialExtra />} />
+            {/* Rota relativa a /stocks */}
           </Route>
 
           <Route path="/crypto" element={<Crypto />} />

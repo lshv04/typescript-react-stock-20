@@ -14,7 +14,7 @@ const NavigateButton: React.FC<NavigateButtonProps> = ({ route, label }) => {
   };
 
   return (
-    <div className="text-center mt-3">
+    <div className="text-center ">
       <button className="btn btn-primary" onClick={handleNavigation}>
         {label}
       </button>
