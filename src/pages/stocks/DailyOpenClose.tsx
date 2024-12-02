@@ -84,11 +84,11 @@ const DailyOpenClose: React.FC = () => {
   };
 
   return (
-    <div className={`container g-0 bord ${isDark ? "dark" : "light"}`}>
+    <div className={`container g-0 bord  ${isDark ? "dark" : "light"}`}>
       <h1 className="title text-center">Daily Open/Close</h1>
       <div className="content">
         <p className="text-center">Details about the ticker and stock data.</p>
-        <NavigateButton route="/stocks/extrainfo" label="Go to Target Page" />
+        <NavigateButton route="/stocks/extrainfo" label="Extra info" />
 
 
         {/* Display ticker data */}
@@ -101,6 +101,7 @@ const DailyOpenClose: React.FC = () => {
                   src={`${tickerData.branding.logo_url}?apiKey=LsO1WF3z2cxUqHd7nIwC4fL3s_w9oBPh`}
                   alt="Company Logo"
                   width="100"
+
                   className="me-3"
                 />
               ) : (
