@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
       <nav className={styles.navbar}>
         {/* Logo ou nome do aplicativo */}
         <NavLink to="/" className={styles.navbarBrand}>
-          MyApp
+          LH
         </NavLink>
 
         {/* Links de navegação */}

@@ -35,7 +35,7 @@ const Dividends: React.FC = () => {
         const response = await axios.get(
           `https://api.polygon.io/v3/reference/dividends?ticker=${inputValue}&limit=10&apiKey=LsO1WF3z2cxUqHd7nIwC4fL3s_w9oBPh`
         );
-        console.log("Dividends Response:", response.data.results);
+        // console.log("Dividends Response:", response.data.results);
         setDividends(response.data.results || []); // Define os dividendos no estado
       } catch (err) {
         console.error("Error fetching dividends:", err);

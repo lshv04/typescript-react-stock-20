@@ -8,7 +8,7 @@ interface InputContextType {
 const InputContext = createContext<InputContextType | undefined>(undefined);
 
 export const InputProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [inputValue, setInputValue] = useState<string>('');
+  const [inputValue, setInputValue] = useState<string>('AAPL');
 
   return (
     <InputContext.Provider value={{ inputValue, setInputValue }}>

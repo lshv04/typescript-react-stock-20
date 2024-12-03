@@ -51,7 +51,7 @@ const DailyOpenClose: React.FC = () => {
         const tickerResponse = await axios.get(
           `https://api.polygon.io/v3/reference/tickers/${inputValue}?apiKey=LsO1WF3z2cxUqHd7nIwC4fL3s_w9oBPh`
         );
-        console.log("Ticker Data Response:", tickerResponse.data); // Log to check ticker data
+        // console.log("Ticker Data Response:", tickerResponse.data); 
         setTickerData(tickerResponse.data.results); // Sets received data
 
         // Fetch Stock Data API
@@ -64,7 +64,7 @@ const DailyOpenClose: React.FC = () => {
             },
           }
         );
-        console.log("Stock Data Response:", stockResponse.data); // Log to check stock data
+        // console.log("Stock Data Response:", stockResponse.data); 
         setStockData(stockResponse.data);
       } catch (err) {
         console.error("Error fetching data:", err);

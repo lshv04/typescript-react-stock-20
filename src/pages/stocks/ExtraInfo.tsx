@@ -41,7 +41,7 @@ const ExtraInfo: React.FC = () => {
         const response = await axios.get(
           `https://api.polygon.io/v3/reference/tickers/${inputValue}?apiKey=LsO1WF3z2cxUqHd7nIwC4fL3s_w9oBPh`
         );
-        console.log("Ticker Info Response:", response.data);
+        // console.log("Ticker Info Response:", response.data);
         setTickerData(response.data.results); // Define os dados recebidos no estado
       } catch (err) {
         console.error("Error fetching ticker info:", err);
@@ -55,7 +55,7 @@ const ExtraInfo: React.FC = () => {
   }, [inputValue]);
 
   return (
-    <div className="container mt-5">
+    <div className="container ">
       <h1 className="text-center mb-4">Extra Information</h1>
 
       {/* Estado de carregamento */}

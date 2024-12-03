@@ -1,10 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useInputContext } from '../context/InputContext';
 import styles from './SharedInput.module.css';
 
 const SharedInput: React.FC = () => {
-  const { setInputValue } = useInputContext(); // Atualiza o contexto
-  const [localValue, setLocalValue] = useState<string>(''); // Gerencia o valor localmente
+  const { inputValue, setInputValue } = useInputContext(); // Atualiza e obtém o contexto
+  const [localValue, setLocalValue] = useState<string>(inputValue); // Inicializa com o valor do contexto
+
+  useEffect(() => {
+    setLocalValue(inputValue); // Sincroniza o localValue com o valor do contexto
+  }, [inputValue]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setLocalValue(e.target.value.toUpperCase()); // Converte para maiúsculas

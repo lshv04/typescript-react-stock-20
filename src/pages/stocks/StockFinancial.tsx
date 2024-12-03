@@ -36,7 +36,7 @@ const StockFinancial: React.FC = () => {
         const response = await axios.get(
           `https://api.polygon.io/vX/reference/financials?ticker=${inputValue}&limit=20&apiKey=LsO1WF3z2cxUqHd7nIwC4fL3s_w9oBPh`
         );
-        console.log("Financial Data Response:", response.data.results);
+        // console.log("Financial Data Response:", response.data.results);
         setFinancialData(response.data.results || []);
       } catch (err) {
         console.error("Error fetching financial data:", err);

@@ -52,7 +52,7 @@ const FinancialExtra: React.FC = () => {
         const response = await axios.get(
           `https://api.polygon.io/vX/reference/financials?ticker=${inputValue}&limit=20&apiKey=LsO1WF3z2cxUqHd7nIwC4fL3s_w9oBPh`
         );
-        console.log("Financials Data Response:", response.data.results);
+        // console.log("Financials Data Response:", response.data.results);
         setFinancialResults(response.data.results || []);
       } catch (err) {
         console.error("Error fetching financial data:", err);
