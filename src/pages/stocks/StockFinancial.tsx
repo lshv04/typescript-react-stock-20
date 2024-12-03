@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useTheme } from "../../context/ThemeContext";
 import { useInputContext } from "../../context/InputContext";
+import { Spinner } from "react-bootstrap";
 import "./StocksShared.css";
 import NavigateButton from "../../components/NavigateButton";
 
@@ -58,7 +59,11 @@ const StockFinancial: React.FC = () => {
         </p>
       </div>
 
-      {loading && <p className="text-center">Loading financial data...</p>}
+      {loading && (
+        <div className="d-flex justify-content-center m-5 pt-3">
+          <Spinner animation="border" variant="primary" />
+        </div>
+      )}
       {error && <p className="text-danger text-center">Error: {error}</p>}
 
       {!loading && financialData.length > 0 && (
@@ -114,7 +119,9 @@ const StockFinancial: React.FC = () => {
       )}
 
       {!loading && financialData.length === 0 && !error && (
-        <p className="text-center">No financial data available for this ticker.</p>
+        <p className="text-center">
+          No financial data available for this ticker.
+        </p>
       )}
     </div>
   );

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useInputContext } from "../../context/InputContext";
+import { Spinner } from "react-bootstrap";
 
 interface TickerInfo {
   cik?: string;
@@ -58,7 +59,13 @@ const ExtraInfo: React.FC = () => {
       <h1 className="text-center mb-4">Extra Information</h1>
 
       {/* Estado de carregamento */}
-      {loading && <p className="text-center text-primary">Loading data...</p>}
+      {loading &&      <div className="d-flex justify-content-center m-5 pt-3">
+        <div className="d-flex justify-content-center m-5 pt-3">
+        <Spinner animation="border" variant="primary" />
+      </div>
+
+      </div>
+}
 
       {/* Mensagem de erro */}
       {error && <p className="text-danger text-center">Error: {error}</p>}

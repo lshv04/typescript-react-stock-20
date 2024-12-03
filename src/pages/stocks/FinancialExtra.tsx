@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import { useTheme } from '../../context/ThemeContext';
-import { useInputContext } from '../../context/InputContext';
-import './StocksShared.css';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import { useTheme } from "../../context/ThemeContext";
+import { useInputContext } from "../../context/InputContext";
+import { Spinner } from "react-bootstrap";
+import "./StocksShared.css";
 
 interface FinancialData {
   label: string;
@@ -34,7 +35,9 @@ interface FinancialResult {
 const FinancialExtra: React.FC = () => {
   const { isDark } = useTheme(); // Obtém o tema atual
   const { inputValue } = useInputContext(); // Obtém o valor do contexto
-  const [financialResults, setFinancialResults] = useState<FinancialResult[]>([]);
+  const [financialResults, setFinancialResults] = useState<FinancialResult[]>(
+    []
+  );
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -49,10 +52,10 @@ const FinancialExtra: React.FC = () => {
         const response = await axios.get(
           `https://api.polygon.io/vX/reference/financials?ticker=${inputValue}&limit=20&apiKey=LsO1WF3z2cxUqHd7nIwC4fL3s_w9oBPh`
         );
-        console.log('Financials Data Response:', response.data.results);
+        console.log("Financials Data Response:", response.data.results);
         setFinancialResults(response.data.results || []);
       } catch (err) {
-        console.error('Error fetching financial data:', err);
+        console.error("Error fetching financial data:", err);
         setError((err as Error).message);
       } finally {
         setLoading(false);
@@ -63,24 +66,34 @@ const FinancialExtra: React.FC = () => {
   }, [inputValue]);
 
   return (
-    <div className={`container ${isDark ? 'dark' : 'light'}`}>
+    <div className={`container ${isDark ? "dark" : "light"}`}>
       <h1 className="title">Financial Extra</h1>
       <div className="text-center mb-4">
         <p>
-          <strong>Ticker:</strong> {inputValue || 'No ticker provided'}
+          <strong>Ticker:</strong> {inputValue || "No ticker provided"}
         </p>
       </div>
 
-      {loading && <p className="text-center">Loading financial data...</p>}
+      {loading && (
+        <div className="d-flex justify-content-center m-5 pt-3">
+          <Spinner animation="border" variant="primary" />
+        </div>
+      )}
       {error && <p className="text-danger text-center">Error: {error}</p>}
 
       {!loading && financialResults.length > 0 && (
         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
           {financialResults.map((result, index) => {
-            const { gross_profit, cost_of_revenue, costs_and_expenses, revenues } =
-              result.financials.income_statement || {};
-            const { net_cash_flow } = result.financials.cash_flow_statement || {};
-            const { assets, current_liabilities } = result.financials.balance_sheet || {};
+            const {
+              gross_profit,
+              cost_of_revenue,
+              costs_and_expenses,
+              revenues,
+            } = result.financials.income_statement || {};
+            const { net_cash_flow } =
+              result.financials.cash_flow_statement || {};
+            const { assets, current_liabilities } =
+              result.financials.balance_sheet || {};
             const { end_date, fiscal_period, start_date } = result;
 
             return (
@@ -88,10 +101,12 @@ const FinancialExtra: React.FC = () => {
                 <div className="card h-100 shadow-sm">
                   <div className="card-header text-center">
                     <p>
-                      <strong>Start Date:</strong> {new Date(start_date).toLocaleDateString()}
+                      <strong>Start Date:</strong>{" "}
+                      {new Date(start_date).toLocaleDateString()}
                     </p>
                     <p>
-                      <strong>End Date:</strong> {new Date(end_date).toLocaleDateString()}
+                      <strong>End Date:</strong>{" "}
+                      {new Date(end_date).toLocaleDateString()}
                     </p>
                     <p>
                       <strong>Fiscal Period:</strong> {fiscal_period}
@@ -102,7 +117,9 @@ const FinancialExtra: React.FC = () => {
                       <>
                         <h6 className="text-center mt-3">Gross Profit</h6>
                         <p className="card-text text-center">
-                          <strong>Value:</strong> {gross_profit.value.toLocaleString()} {gross_profit.unit}
+                          <strong>Value:</strong>{" "}
+                          {gross_profit.value.toLocaleString()}{" "}
+                          {gross_profit.unit}
                         </p>
                       </>
                     )}
@@ -111,7 +128,9 @@ const FinancialExtra: React.FC = () => {
                       <>
                         <h6 className="text-center mt-3">Cost Of Revenue</h6>
                         <p className="card-text text-center">
-                          <strong>Value:</strong> {cost_of_revenue.value.toLocaleString()} {cost_of_revenue.unit}
+                          <strong>Value:</strong>{" "}
+                          {cost_of_revenue.value.toLocaleString()}{" "}
+                          {cost_of_revenue.unit}
                         </p>
                       </>
                     )}
@@ -120,7 +139,9 @@ const FinancialExtra: React.FC = () => {
                       <>
                         <h6 className="text-center mt-3">Costs And Expenses</h6>
                         <p className="card-text text-center">
-                          <strong>Value:</strong> {costs_and_expenses.value.toLocaleString()} {costs_and_expenses.unit}
+                          <strong>Value:</strong>{" "}
+                          {costs_and_expenses.value.toLocaleString()}{" "}
+                          {costs_and_expenses.unit}
                         </p>
                       </>
                     )}
@@ -129,7 +150,8 @@ const FinancialExtra: React.FC = () => {
                       <>
                         <h6 className="text-center mt-3">Revenues</h6>
                         <p className="card-text text-center">
-                          <strong>Value:</strong> {revenues.value.toLocaleString()} {revenues.unit}
+                          <strong>Value:</strong>{" "}
+                          {revenues.value.toLocaleString()} {revenues.unit}
                         </p>
                       </>
                     )}
@@ -138,7 +160,9 @@ const FinancialExtra: React.FC = () => {
                       <>
                         <h6 className="text-center mt-3">Net Cash Flow</h6>
                         <p className="card-text text-center">
-                          <strong>Value:</strong> {net_cash_flow.value.toLocaleString()} {net_cash_flow.unit}
+                          <strong>Value:</strong>{" "}
+                          {net_cash_flow.value.toLocaleString()}{" "}
+                          {net_cash_flow.unit}
                         </p>
                       </>
                     )}
@@ -147,16 +171,21 @@ const FinancialExtra: React.FC = () => {
                       <>
                         <h6 className="text-center mt-3">Assets</h6>
                         <p className="card-text text-center">
-                          <strong>Value:</strong> {assets.value.toLocaleString()} {assets.unit}
+                          <strong>Value:</strong>{" "}
+                          {assets.value.toLocaleString()} {assets.unit}
                         </p>
                       </>
                     )}
 
                     {current_liabilities && (
                       <>
-                        <h6 className="text-center mt-3">Current Liabilities</h6>
+                        <h6 className="text-center mt-3">
+                          Current Liabilities
+                        </h6>
                         <p className="card-text text-center">
-                          <strong>Value:</strong> {current_liabilities.value.toLocaleString()} {current_liabilities.unit}
+                          <strong>Value:</strong>{" "}
+                          {current_liabilities.value.toLocaleString()}{" "}
+                          {current_liabilities.unit}
                         </p>
                       </>
                     )}
@@ -169,7 +198,9 @@ const FinancialExtra: React.FC = () => {
       )}
 
       {!loading && financialResults.length === 0 && !error && (
-        <p className="text-center">No financial data available for this ticker.</p>
+        <p className="text-center">
+          No financial data available for this ticker.
+        </p>
       )}
     </div>
   );

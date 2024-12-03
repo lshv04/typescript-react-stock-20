@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useTheme } from "../../context/ThemeContext";
+import { Spinner } from "react-bootstrap";
 import { useInputContext } from "../../context/InputContext"; // Imports InputContext
 import "./StocksShared.css"; // Imports shared CSS
 import NavigateButton from "../../components/NavigateButton";
-
 
 interface TickerBranding {
   logo_url?: string; // URL of the logo
@@ -86,10 +86,9 @@ const DailyOpenClose: React.FC = () => {
   return (
     <div className={`container g-0 bord  ${isDark ? "dark" : "light"}`}>
       <h1 className="title text-center">Daily Open/Close</h1>
-      <div className="content">
+      <div className="content d-flex flex-column gap-3">
         <p className="text-center">Details about the ticker and stock data.</p>
         <NavigateButton route="/stocks/extrainfo" label="Extra info" />
-
 
         {/* Display ticker data */}
         {tickerData && (
@@ -101,7 +100,6 @@ const DailyOpenClose: React.FC = () => {
                   src={`${tickerData.branding.logo_url}?apiKey=LsO1WF3z2cxUqHd7nIwC4fL3s_w9oBPh`}
                   alt="Company Logo"
                   width="100"
-
                   className="me-3"
                 />
               ) : (
@@ -125,10 +123,13 @@ const DailyOpenClose: React.FC = () => {
         <p className="text-center">
           <strong>Ticker:</strong> {inputValue}
         </p>
-       
 
         {/* Loading state */}
-        {loading && <p className="text-center">Loading data...</p>}
+        {loading && (
+          <div className="d-flex justify-content-center m-5 pt-3">
+            <Spinner animation="border" variant="primary" />
+          </div>
+        )}
         {error && <p className="text-danger text-center">Error: {error}</p>}
 
         {/* Display Stock Data */}

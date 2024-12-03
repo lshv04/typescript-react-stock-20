@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useTheme } from "../../context/ThemeContext";
 import { useInputContext } from "../../context/InputContext";
+import { Spinner } from "react-bootstrap";
 import "./StocksShared.css"; // Importa o CSS compartilhado
 
 interface NewsItem {
@@ -55,7 +56,11 @@ const TickerNews: React.FC = () => {
       </div>
 
       {/* Estado de carregamento */}
-      {loading && <p className="text-center text-primary">Loading news...</p>}
+      {loading && (
+        <div className="d-flex justify-content-center m-5 pt-3">
+          <Spinner animation="border" variant="primary" />
+        </div>
+      )}
 
       {/* Mensagem de erro */}
       {error && <p className="text-danger text-center">Error: {error}</p>}
@@ -91,7 +96,9 @@ const TickerNews: React.FC = () => {
           ))}
         </div>
       ) : (
-        !loading && <p className="text-center">No news available for this ticker.</p>
+        !loading && (
+          <p className="text-center">No news available for this ticker.</p>
+        )
       )}
     </div>
   );
