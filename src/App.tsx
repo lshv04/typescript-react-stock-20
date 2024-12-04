@@ -35,13 +35,15 @@ const App: React.FC = () => {
             <Route path="dividends" element={<Dividends />} />
             <Route path="stock-financial" element={<StockFinancial />} />
             <Route path="extrainfo" element={<ExtraInfo />} />
-            <Route path="/stocks/stock-financial/financial-extra" element={<FinancialExtra />} />
-            {/* Rota relativa a /stocks */}
+            <Route
+              path="stock-financial/financial-extra"
+              element={<FinancialExtra />}
+            />
           </Route>
 
+          {/* Rotas de criptomoedas */}
           <Route path="/crypto" element={<Crypto />} />
-          <Route path="/crypto-extra/:symbol" element={<CryptoExtra />} />
-
+          <Route path="/crypto/crypto-extra/:symbol" element={<CryptoExtra />} />
         </Routes>
       </Router>
     </InputProvider>

@@ -51,7 +51,7 @@ const CryptoBasic: React.FC<CryptoBasicProps> = ({ symbol }) => {
   }, [symbol]);
 
   const handleMoreInfoClick = () => {
-    navigate(`/crypto-extra/${symbol.toUpperCase()}`); // Navega para a página CryptoExtra com o símbolo
+    navigate(`/crypto/crypto-extra/${symbol.toUpperCase()}`); // Navega para a página CryptoExtra com o símbolo
   };
 
   if (loading) {
