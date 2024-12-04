@@ -11,7 +11,7 @@ interface CryptoData {
 }
 
 interface CryptoBasicProps {
-  symbol: string; // O símbolo da criptomoeda (ex.: BTC, ETH)
+  symbol: string;
 }
 
 const CryptoBasic: React.FC<CryptoBasicProps> = ({ symbol }) => {
@@ -51,7 +51,7 @@ const CryptoBasic: React.FC<CryptoBasicProps> = ({ symbol }) => {
   }, [symbol]);
 
   const handleMoreInfoClick = () => {
-    navigate(`/crypto/crypto-extra/${symbol.toUpperCase()}`); // Navega para a página CryptoExtra com o símbolo
+    navigate(`/crypto/crypto-extra/${symbol.toUpperCase()}`); 
   };
 
   if (loading) {

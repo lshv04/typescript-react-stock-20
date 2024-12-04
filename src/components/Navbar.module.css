@@ -32,11 +32,11 @@
 }
 
 .navLink:hover {
-  color: #ffdd57; /* Cor amarela no hover */
+  color: #ffdd57;
 }
 
 /* Link ativo */
 .active {
   font-weight: bold;
-  color: #ffdd57; /* Destaque para o link ativo */
+  color: #ffdd57; 
 }

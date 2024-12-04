@@ -1,8 +1,8 @@
-import React from 'react';
-import { NavLink, Outlet } from 'react-router-dom';
-import { useTheme } from '../context/ThemeContext';
-import styles from './Stocks.module.css';
-import SharedInput from '../components/SharedInput';
+import React from "react";
+import { NavLink, Outlet } from "react-router-dom";
+import { useTheme } from "../context/ThemeContext";
+import styles from "./Stocks.module.css";
+import SharedInput from "../components/SharedInput";
 
 const Stocks: React.FC = () => {
   const { isDark } = useTheme(); // Obtém o estado do tema
@@ -10,18 +10,16 @@ const Stocks: React.FC = () => {
   return (
     <div className="container bord g-0">
       <div
-        className={`${styles.container} ${
-          isDark ? styles.dark : styles.light
-        }`} // Aplica dinamicamente o tema
+        className={`${styles.container} ${isDark ? styles.dark : styles.light}`} // Aplica dinamicamente o tema
       >
         <SharedInput />
         <nav className={`${styles.nav} bord`}>
-          <div className="row g-3 "> {/* Estrutura em grid */}
+          <div className="row g-3 ">
             <div className="col-6  col-md-3 bord">
               <NavLink
                 to="daily-open-close"
                 className={({ isActive }) =>
-                  `${styles.navLink} ${isActive ? styles.active : ''}`
+                  `${styles.navLink} ${isActive ? styles.active : ""}`
                 }
               >
                 Open/Close
@@ -31,7 +29,7 @@ const Stocks: React.FC = () => {
               <NavLink
                 to="ticker-news"
                 className={({ isActive }) =>
-                  `${styles.navLink} ${isActive ? styles.active : ''}`
+                  `${styles.navLink} ${isActive ? styles.active : ""}`
                 }
               >
                 News
@@ -41,7 +39,7 @@ const Stocks: React.FC = () => {
               <NavLink
                 to="dividends"
                 className={({ isActive }) =>
-                  `${styles.navLink} ${isActive ? styles.active : ''}`
+                  `${styles.navLink} ${isActive ? styles.active : ""}`
                 }
               >
                 Dividends
@@ -51,7 +49,7 @@ const Stocks: React.FC = () => {
               <NavLink
                 to="stock-financial"
                 className={({ isActive }) =>
-                  `${styles.navLink} ${isActive ? styles.active : ''}`
+                  `${styles.navLink} ${isActive ? styles.active : ""}`
                 }
               >
                 Financial

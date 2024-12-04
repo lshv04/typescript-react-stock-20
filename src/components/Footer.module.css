@@ -1,6 +1,6 @@
 .footer {
-    background-color: #16222a; /* Cor de fundo escura */
-    color: #fff; /* Cor do texto em branco */
+    background-color: #16222a; 
+    color: #fff; 
     text-align: center;
     padding: 15px;
     font-size: 0.9rem;
@@ -15,12 +15,12 @@
   
   .footerIcon {
     color: #fff;
-    font-size: 1.5rem; /* Tamanho dos ícones */
+    font-size: 1.5rem; 
     margin: 0 10px;
     transition: color 0.3s;
   }
   
   .footerIcon:hover {
-    color: #00aaff; /* Cor ao passar o mouse */
+    color: #00aaff;
   }
   

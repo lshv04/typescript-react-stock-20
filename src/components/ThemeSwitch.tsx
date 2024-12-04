@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTheme } from '../context/ThemeContext';
-import './ThemeSwitch.css'; // Importa o CSS normal
+import './ThemeSwitch.css'; 
 
 const ThemeSwitch: React.FC = () => {
   const { isDark, toggleTheme } = useTheme();

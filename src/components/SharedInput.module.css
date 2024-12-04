@@ -2,14 +2,14 @@
 .form {
     display: flex;
     align-items: center;
-    gap: 0.5rem; /* Espaçamento entre o input e o botão */
-    max-width: 300px; /* Limita a largura total */
-    margin: 0 auto; /* Centraliza horizontalmente */
+    gap: 0.5rem; 
+    max-width: 300px; 
+    margin: 0 auto;
   }
   
   /* Estilo do input */
   .input {
-    flex: 1; /* Permite que o input ocupe o espaço restante */
+    flex: 1;
     padding: 0.4rem;
     font-size: 0.9rem;
     border: 1px solid #ccc;
@@ -18,7 +18,7 @@
   }
   
   .input:focus {
-    border-color: #007bff; /* Cor azul ao focar */
+    border-color: #007bff; 
     outline: none;
   }
   
@@ -36,6 +36,6 @@
   }
   
   .button:hover {
-    background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+    background-color: #0056b3;
   }
   

@@ -21,8 +21,8 @@
   
   /* Estilo quando o botão está "off" */
   .themeSwitch.off {
-    background-color: #f8f9fa; /* Fundo claro */
-    color: #212529; /* Texto escuro */
+    background-color: #f8f9fa;
+    color: #212529; 
   }
   
   /* Hover */
