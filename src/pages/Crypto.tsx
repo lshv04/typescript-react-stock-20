@@ -1,10 +1,42 @@
-import React from 'react';
+import React from "react";
+import CryptoBasic from "../components/CryptoBasic";
 
 const Crypto: React.FC = () => {
   return (
-    <div>
+    <div className="container">
       <h1>Crypto Page</h1>
-      <p>Bem-vindo à página de criptomoedas!</p>
+      <div className="row">
+        <div className="col-6 col-md-3 col-lg-2">
+          <CryptoBasic symbol="BTC" />
+        </div>
+        <div className="col-6 col-md-3 col-lg-2">
+          <CryptoBasic symbol="ETH" />
+        </div>
+        <div className="col-6 col-md-3 col-lg-2">
+          <CryptoBasic symbol="USDT" />
+        </div>
+        <div className="col-6 col-md-3 col-lg-2">
+          <CryptoBasic symbol="BNB" />
+        </div>
+        <div className="col-6 col-md-3 col-lg-2">
+          <CryptoBasic symbol="USDC" />
+        </div>
+        <div className="col-6 col-md-3 col-lg-2">
+          <CryptoBasic symbol="XRP" />
+        </div>
+        <div className="col-6 col-md-3 col-lg-2">
+          <CryptoBasic symbol="ADA" />
+        </div>
+        <div className="col-6 col-md-3 col-lg-2">
+          <CryptoBasic symbol="DOGE" />
+        </div>
+        <div className="col-6 col-md-3 col-lg-2">
+          <CryptoBasic symbol="SOL" />
+        </div>
+        <div className="col-6 col-md-3 col-lg-2">
+          <CryptoBasic symbol="TON" />
+        </div>
+      </div>
     </div>
   );
 };
