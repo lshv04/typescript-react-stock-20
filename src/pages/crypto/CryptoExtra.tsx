@@ -53,7 +53,7 @@ const CryptoExtra: React.FC = () => {
         );
 
         if (crypto) {
-          console.log('Filtered Crypto Data:', crypto); // Verificando os dados no console
+        //   console.log('Filtered Crypto Data:', crypto); 
           setData(crypto);
         } else {
           console.error('Crypto not found.');
@@ -90,7 +90,7 @@ const CryptoExtra: React.FC = () => {
 
   return (
     data && (
-      <div className="container d-flex justify-content-center align-items-center mt-5">
+      <div className="container d-flex justify-content-center align-items-center mt-2">
         <div className="card shadow-lg rounded-3" style={{ width: '100%', maxWidth: '700px' }}>
           <div className="card-body">
             <h4 className="text-primary text-center mb-4">

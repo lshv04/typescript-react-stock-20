@@ -4,7 +4,7 @@ import CryptoBasic from "../components/CryptoBasic";
 const Crypto: React.FC = () => {
   return (
     <div className="container">
-      <h1>Crypto Page</h1>
+      <h1 className="text-center">Crypto Page</h1>
       <div className="row">
         <div className="col-6 col-md-3 col-lg-2">
           <CryptoBasic symbol="BTC" />

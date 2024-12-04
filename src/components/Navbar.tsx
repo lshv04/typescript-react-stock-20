@@ -18,13 +18,13 @@ const Navbar: React.FC = () => {
             to="/stocks"
             className={({ isActive }) => `${styles.navLink} ${isActive ? styles.active : ''}`}
           >
-            Stocks
+            Stocks <i className="bi bi-graph-up-arrow"></i>
           </NavLink>
           <NavLink
             to="/crypto"
             className={({ isActive }) => `${styles.navLink} ${isActive ? styles.active : ''}`}
           >
-            Crypto
+            Crypto <i className="bi bi-currency-bitcoin"></i>
           </NavLink>
         </div>
 
