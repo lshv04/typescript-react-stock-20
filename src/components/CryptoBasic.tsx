@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Importa useNavigate para navegação
 import axios from 'axios';
-import { Card, Button, Spinner } from 'react-bootstrap'; // Importando componentes do Bootstrap
+import { Card, Button, Spinner } from 'react-bootstrap';
 
 interface CryptoData {
   id: number;
@@ -17,6 +18,8 @@ const CryptoBasic: React.FC<CryptoBasicProps> = ({ symbol }) => {
   const [data, setData] = useState<CryptoData | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
+
+  const navigate = useNavigate(); // Hook para navegação
 
   useEffect(() => {
     const fetchCryptoData = async () => {
@@ -46,6 +49,10 @@ const CryptoBasic: React.FC<CryptoBasicProps> = ({ symbol }) => {
 
     fetchCryptoData();
   }, [symbol]);
+
+  const handleMoreInfoClick = () => {
+    navigate(`/crypto-extra/${symbol.toUpperCase()}`); // Navega para a página CryptoExtra com o símbolo
+  };
 
   if (loading) {
     return (
@@ -78,7 +85,9 @@ const CryptoBasic: React.FC<CryptoBasicProps> = ({ symbol }) => {
             Symbol: {data.symbol}
           </Card.Text>
           <div className="d-flex justify-content-center">
-            <Button variant="primary">More Info</Button>
+            <Button variant="primary" onClick={handleMoreInfoClick}>
+              More Info
+            </Button>
           </div>
         </Card.Body>
       </Card>
