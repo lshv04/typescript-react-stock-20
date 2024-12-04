@@ -69,7 +69,7 @@ const StockFinancial: React.FC = () => {
       {!loading && financialData.length > 0 && (
         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
           {financialData.map((item, index) => (
-            <div className="col" key={index}>
+            <div className="col" key={`${item.start_date}-${item.fiscal_period}`}>
               <div
                 className="card h-100 shadow-sm d-flex flex-column justify-content-between"
                 style={{ display: "flex" }}

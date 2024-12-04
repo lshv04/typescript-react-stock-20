@@ -15,6 +15,7 @@ interface FinancialResult {
   end_date: string;
   start_date: string;
   fiscal_period: string;
+  fiscal_year: number;
   financials: {
     income_statement?: {
       gross_profit?: FinancialData;
@@ -52,7 +53,7 @@ const FinancialExtra: React.FC = () => {
         const response = await axios.get(
           `https://api.polygon.io/vX/reference/financials?ticker=${inputValue}&limit=20&apiKey=LsO1WF3z2cxUqHd7nIwC4fL3s_w9oBPh`
         );
-        // console.log("Financials Data Response:", response.data.results);
+        console.log("Financials Data Response:", response.data.results);
         setFinancialResults(response.data.results || []);
       } catch (err) {
         console.error("Error fetching financial data:", err);
@@ -83,7 +84,7 @@ const FinancialExtra: React.FC = () => {
 
       {!loading && financialResults.length > 0 && (
         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-          {financialResults.map((result, index) => {
+          {financialResults.map((result) => {
             const {
               gross_profit,
               cost_of_revenue,
@@ -94,10 +95,10 @@ const FinancialExtra: React.FC = () => {
               result.financials.cash_flow_statement || {};
             const { assets, current_liabilities } =
               result.financials.balance_sheet || {};
-            const { end_date, fiscal_period, start_date } = result;
+            const { end_date, fiscal_period, start_date, fiscal_year } = result;
 
             return (
-              <div className="col" key={index}>
+              <div className="col" key={`${fiscal_period}-${fiscal_year}`}>
                 <div className="card h-100 shadow-sm">
                   <div className="card-header text-center">
                     <p>
@@ -110,6 +111,9 @@ const FinancialExtra: React.FC = () => {
                     </p>
                     <p>
                       <strong>Fiscal Period:</strong> {fiscal_period}
+                    </p>
+                    <p>
+                      <strong>Fiscal Year:</strong> {fiscal_year}
                     </p>
                   </div>
                   <div className="card-body">
