@@ -16,6 +16,7 @@ import { InputProvider } from "./context/InputContext";
 import ExtraInfo from "./pages/stocks/ExtraInfo";
 import FinancialExtra from "./pages/stocks/FinancialExtra";
 import CryptoExtra from "./pages/crypto/CryptoExtra";
+import Footer from "./components/Footer";
 
 const App: React.FC = () => {
   return (
@@ -45,6 +46,7 @@ const App: React.FC = () => {
           <Route path="/crypto" element={<Crypto />} />
           <Route path="/crypto/crypto-extra/:symbol" element={<CryptoExtra />} />
         </Routes>
+        <Footer/>
       </Router>
     </InputProvider>
   );
