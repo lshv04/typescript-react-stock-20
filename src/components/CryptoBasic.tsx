@@ -29,7 +29,7 @@ const CryptoBasic: React.FC<CryptoBasicProps> = ({ symbol }) => {
       try {
         const response = await axios.get('/v1/cryptocurrency/info', {
           headers: {
-            'X-CMC_PRO_API_KEY': '17367773-4f63-4eda-a5fa-69f13ca1611d',
+            'X-CMC_PRO_API_KEY': process.env.REACT_APP_CMC_API_KEY,
             Accept: 'application/json',
           },
           params: {

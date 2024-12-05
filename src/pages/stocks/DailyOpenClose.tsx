@@ -49,7 +49,7 @@ const DailyOpenClose: React.FC = () => {
       try {
         // Fetch Ticker Details API
         const tickerResponse = await axios.get(
-          `https://api.polygon.io/v3/reference/tickers/${inputValue}?apiKey=LsO1WF3z2cxUqHd7nIwC4fL3s_w9oBPh`
+          `https://api.polygon.io/v3/reference/tickers/${inputValue}?apiKey=${process.env.REACT_APP_POLYGON_API_KEY}`
         );
         // console.log("Ticker Data Response:", tickerResponse.data); 
         setTickerData(tickerResponse.data.results); // Sets received data
@@ -60,7 +60,7 @@ const DailyOpenClose: React.FC = () => {
           {
             params: {
               adjusted: true,
-              apiKey: "LsO1WF3z2cxUqHd7nIwC4fL3s_w9oBPh",
+              apiKey: process.env.REACT_APP_POLYGON_API_KEY,
             },
           }
         );

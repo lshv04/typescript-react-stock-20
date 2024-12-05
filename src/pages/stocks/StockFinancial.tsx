@@ -34,7 +34,7 @@ const StockFinancial: React.FC = () => {
 
       try {
         const response = await axios.get(
-          `https://api.polygon.io/vX/reference/financials?ticker=${inputValue}&limit=20&apiKey=LsO1WF3z2cxUqHd7nIwC4fL3s_w9oBPh`
+          `https://api.polygon.io/vX/reference/financials?ticker=${inputValue}&limit=20&apiKey=${process.env.REACT_APP_POLYGON_API_KEY}`
         );
         // console.log("Financial Data Response:", response.data.results);
         setFinancialData(response.data.results || []);
@@ -68,7 +68,7 @@ const StockFinancial: React.FC = () => {
 
       {!loading && financialData.length > 0 && (
         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-          {financialData.map((item, index) => (
+          {financialData.map((item) => (
             <div className="col" key={`${item.start_date}-${item.fiscal_period}`}>
               <div
                 className="card h-100 shadow-sm d-flex flex-column justify-content-between"

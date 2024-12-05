@@ -39,7 +39,7 @@ const ExtraInfo: React.FC = () => {
 
       try {
         const response = await axios.get(
-          `https://api.polygon.io/v3/reference/tickers/${inputValue}?apiKey=LsO1WF3z2cxUqHd7nIwC4fL3s_w9oBPh`
+          `https://api.polygon.io/v3/reference/tickers/${inputValue}?apiKey=${process.env.REACT_APP_POLYGON_API_KEY}`
         );
         // console.log("Ticker Info Response:", response.data);
         setTickerData(response.data.results); // Define os dados recebidos no estado

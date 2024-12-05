@@ -29,7 +29,7 @@ const TickerNews: React.FC = () => {
 
       try {
         const response = await axios.get(
-          `https://api.polygon.io/v2/reference/news?ticker=${inputValue}&limit=20&apiKey=LsO1WF3z2cxUqHd7nIwC4fL3s_w9oBPh`
+          `https://api.polygon.io/v2/reference/news?ticker=${inputValue}&limit=20&apiKey=${process.env.REACT_APP_POLYGON_API_KEY}`
         );
         // console.log("News Response:", response.data.results);
         setNews(response.data.results || []); // Define as notícias no estado
