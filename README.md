@@ -1,46 +1,75 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Blue Futuristic Technology Presentation (1).pdf](https://github.com/user-attachments/files/18038009/Blue.Futuristic.Technology.Presentation.1.pdf)
 
-## Available Scripts
 
-In the project directory, you can run:
+# Projeto Pessoal - Typescript-React-Stock-20  
 
-### `npm start`
+Este projeto é um site de portfólio pessoal desenvolvido com o objetivo de criar uma página que trás informações de ações negociadas nos EUA e cryptomoedas negociadas globalmente.  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**Características**  
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+O usuário escolhe entre as páginas "Stock" e "Crypto". Ao selecionar Stock, ele é convidado a digitar o código de qualquer ação negociada nos EUA e receberá uma série de informações sobre esse determinado ativo. Se selecionar a página Crypto, ele irá selecionar ma das criptomoedas elecionadas receberá uma série de informações dela. Projeto feito com react e type-script  
 
-### `npm test`
+## 📁 Acesso ao projeto  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Não publiquei o projeto por limitações de call das api's e politica de CORS, que dificultam a usabilidade da página.  
 
-### `npm run build`
+## ✔️ Técnicas e tecnologias utilizadas  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **TypeScript**: Código tipado e mais seguro.  
+- **React Hooks**: Utilizei diversos hooks nativos, como `useState`, `useEffect`, `useContext`, `useNavigate`, além de hooks personalizados como `useInputContext` e `useTheme`, para acessar rapidamente os contextos.  
+- **React Router**: Paginação feita de forma componentizada, a fim de evitar recarregamento ao mudar as páginas.  
+- **Dynamic Router**: Roteamento dinâmico para criar páginas com URLs específicas e adequadas.  
+- **React Nested Router**: Implementação de rotas aninhadas, permitindo que componentes filhos sejam renderizados dentro de componentes pais, criando uma navegação estruturada e hierárquica.  
+- **Link Ativo**: Utilizei links ativos para melhorar a navegabilidade do projeto.  
+- **Context API**: Criei dois contextos:  
+  - O primeiro para implementar Light e Dark Mode.  
+  - O segundo para capturar e distribuir o input do usuário.  
+- **Bootstrap**: Utilizado amplamente no projeto para estilização e layout. Inclui:  
+  - Botões estilizados para maior eficiência no design.  
+  - Spinner para indicar carregamento de dados da API.  
+  - Ícones para complementar o design visual.  
+  - Sistema de grid responsivo para organização e melhor adaptação em diferentes dispositivos.  
+- **Axios**: Gerenciador de chamadas às APIs para consumir os dados.  
+- **Variáveis de Ambiente**: Utilização de variáveis de ambiente para proteger as API keys presentes no projeto.  
+- **Proxy**: Configuração de proxy para lidar com restrições de CORS.  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🌟 Aprendizados  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **TypeScript**: Este projeto marcou minha primeira experiência utilizando TypeScript. A adoção da linguagem trouxe um novo nível de segurança e clareza ao código, ajudando a evitar erros comuns e melhorar a manutenção do projeto. Aprendi a definir tipos personalizados, trabalhar com interfaces e usar generics para criar um código mais robusto e previsível.  
 
-### `npm run eject`
+- **Axios**: Foi a primeira vez que utilizei a biblioteca Axios para realizar chamadas a APIs. Durante o desenvolvimento, aprendi a configurar instâncias personalizadas, tratar erros de forma eficiente e manipular os dados retornados com mais facilidade, o que contribuiu para uma integração mais fluida com os serviços externos.  
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- **Context API**: Este foi meu primeiro contato com a Context API, utilizada para armazenar e compartilhar informações globalmente dentro da aplicação. Aprendi a criar e consumir contextos, aplicando-os para implementar funcionalidades como Light/Dark Mode e gerenciamento de inputs do usuário, o que eliminou a necessidade de passar props manualmente entre componentes.  
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🚀 Próximos Desafios  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- **CORS**: Durante o desenvolvimento, enfrentei dificuldades para lidar com a política de CORS em ambiente de produção. Embora tenha configurado um proxy para testes locais, a solução não é ideal para produção. Meu próximo objetivo é explorar o uso de bibliotecas como `cors-anywhere` ou configurar middlewares no frontend para gerenciar esse problema de forma eficiente e segura.  
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- **Cacheamento de API**: Notei que as chamadas às APIs não estão sendo otimizadas, resultando em renderizações constantes e consumo desnecessário de chamadas. Um dos meus desafios futuros é implementar uma estratégia eficiente de cacheamento, como o uso de `localStorage`, `sessionStorage` ou bibliotecas como React Query, para armazenar os dados retornados e reduzir a quantidade de requisições, melhorando a performance e a experiência do usuário.  
 
-## Learn More
+Neste repositório, você tem acesso a todo o material produzido no projeto.  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![image](https://github.com/user-attachments/assets/83db5455-e0e4-458d-9132-ee5f3aa70b5b)  
+![image](https://github.com/user-attachments/assets/862bc695-bded-4554-9987-a355ee4708bf)  
+![image](https://github.com/user-attachments/assets/9757b850-67e0-4f2a-8cca-69a820bb92ac)  
+![image](https://github.com/user-attachments/assets/3e607853-47fa-4f2d-a1f0-a6b0996fec04)  
+![image](https://github.com/user-attachments/assets/a7de625e-803e-4bd2-b3fd-15ca24b278b1)  
+![image](https://github.com/user-attachments/assets/164f1bdb-04a7-4691-8b1f-66de50f71670)  
+![image](https://github.com/user-attachments/assets/07cae4a0-12cd-40b3-8fec-d86d569644a2)  
+![image](https://github.com/user-attachments/assets/462c4a36-5a22-4f6b-85a7-1eabd209d222)  
+![image](https://github.com/user-attachments/assets/018bfa33-ca91-42da-91a9-bc526e2b2844)  
+![image](https://github.com/user-attachments/assets/e462ecae-7c90-4f5b-9120-df8b01148c00)  
+![image](https://github.com/user-attachments/assets/3626dba2-c7f2-4c83-8654-699bf316b27b)  
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+
+
+
+
+
+
+
+
+
