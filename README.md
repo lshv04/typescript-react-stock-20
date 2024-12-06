@@ -1,9 +1,6 @@
-
+🇧🇷 [Leia em Português](#projeto-pessoal---typescript-react-stock-20) | 🇺🇸 [Read in English](#personal-project---typescript-react-stock-20) | 🎥 [Mídias (fotos e vídeos)](#-mídias-fotos-e-vídeos)  
 
 ![Blue Futuristic Technology Presentation (32)](https://github.com/user-attachments/assets/fd5f7e1f-a0c9-41b7-92e5-72e4504a5bfe)  
-
-
-🇧🇷 [Leia em Português](#projeto-pessoal---typescript-react-stock-20) | 🇺🇸 [Read in English](#personal-project---typescript-react-stock-20) | 🎥 [Mídias (fotos e vídeos)](#midias-fotos-e-videos)  
 
 # Projeto Pessoal - Typescript-React-Stock-20  
 
@@ -112,3 +109,11 @@ I have not published the project due to limitations in API calls and CORS policy
 ![image](https://github.com/user-attachments/assets/018bfa33-ca91-42da-91a9-bc526e2b2844)  
 ![image](https://github.com/user-attachments/assets/e462ecae-7c90-4f5b-9120-df8b01148c00)  
 ![image](https://github.com/user-attachments/assets/3626dba2-c7f2-4c83-8654-699bf316b27b)  
+
+
+https://github.com/user-attachments/assets/b59465ca-4cbc-4496-bf57-8c02efddf29c
+
+
+https://github.com/user-attachments/assets/31d1e355-c8ba-40dc-8aa2-4b7e083732ce
+
+
