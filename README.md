@@ -103,6 +103,7 @@ I have not published the project due to limitations in API calls and CORS policy
 
 In this repository, you have access to all the material produced for the project.  
 
+## 🎥 Mídias (fotos e vídeos)
 
 ![image](https://github.com/user-attachments/assets/83db5455-e0e4-458d-9132-ee5f3aa70b5b)  
 ![image](https://github.com/user-attachments/assets/862bc695-bded-4554-9987-a355ee4708bf)  
