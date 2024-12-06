@@ -2,7 +2,7 @@
 ![Blue Futuristic Technology Presentation (32)](https://github.com/user-attachments/assets/fd5f7e1f-a0c9-41b7-92e5-72e4504a5bfe)
 
 
-🇧🇷 [Leia em Português](#projeto-pessoal---typescript-react-stock-20) | 🇺🇸 [Read in English](#personal-project---typescript-react-stock-20) | 🎥 [Mídias (fotos e vídeos)](https://github.com/user-attachments/assets/e457e2fd-5acb-436d-8691-9c7727c9f4f1) 
+🇧🇷 [Leia em Português](#projeto-pessoal---typescript-react-stock-20) | 🇺🇸 [Read in English](#personal-project---typescript-react-stock-20) | 🎥 [Mídias (fotos e vídeos)](#midias-fotos-e-videos)  
 
 
 # Projeto Pessoal - Typescript-React-Stock-20  
