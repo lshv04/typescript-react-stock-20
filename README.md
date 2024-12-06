@@ -1,9 +1,9 @@
 
-![Blue Futuristic Technology Presentation (32)](https://github.com/user-attachments/assets/fd5f7e1f-a0c9-41b7-92e5-72e4504a5bfe)
+
+![Blue Futuristic Technology Presentation (32)](https://github.com/user-attachments/assets/fd5f7e1f-a0c9-41b7-92e5-72e4504a5bfe)  
 
 
 🇧🇷 [Leia em Português](#projeto-pessoal---typescript-react-stock-20) | 🇺🇸 [Read in English](#personal-project---typescript-react-stock-20) | 🎥 [Mídias (fotos e vídeos)](#midias-fotos-e-videos)  
-
 
 # Projeto Pessoal - Typescript-React-Stock-20  
 
@@ -55,8 +55,6 @@ Neste repositório, você tem acesso a todo o material produzido no projeto.
 
 # Personal Project - Typescript-React-Stock-20  
 
-
-
 This project is a personal portfolio website developed to create a page that provides information about stocks traded in the US and cryptocurrencies traded globally.  
 
 **Features**  
@@ -101,9 +99,7 @@ I have not published the project due to limitations in API calls and CORS policy
 
 - **API Caching**: I noticed that API calls are not optimized, resulting in constant rendering and unnecessary API calls. A future challenge is to implement an efficient caching strategy, such as using `localStorage`, `sessionStorage`, or libraries like React Query, to store the returned data and reduce the number of requests, enhancing performance and user experience.  
 
-In this repository, you have access to all the material produced for the project.  
-
-## 🎥 Mídias (fotos e vídeos)
+## 🎥 Mídias (fotos e vídeos)  
 
 ![image](https://github.com/user-attachments/assets/83db5455-e0e4-458d-9132-ee5f3aa70b5b)  
 ![image](https://github.com/user-attachments/assets/862bc695-bded-4554-9987-a355ee4708bf)  
@@ -116,23 +112,3 @@ In this repository, you have access to all the material produced for the project
 ![image](https://github.com/user-attachments/assets/018bfa33-ca91-42da-91a9-bc526e2b2844)  
 ![image](https://github.com/user-attachments/assets/e462ecae-7c90-4f5b-9120-df8b01148c00)  
 ![image](https://github.com/user-attachments/assets/3626dba2-c7f2-4c83-8654-699bf316b27b)  
-
-
-
-
-
-
-
-
-https://github.com/user-attachments/assets/233c406b-f158-46a0-8252-507e452ba8e9
-
-
-https://github.com/user-attachments/assets/e457e2fd-5acb-436d-8691-9c7727c9f4f1
-
-
-
-
-
-
-
-
